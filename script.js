@@ -2,19 +2,17 @@ $(document).ready(function() {
   $('body').addClass('js');
   var $nav = $('nav'),
       $hamburger = $('#hamburger'),
-      $overlay = $('#overlay');
-
-
+      $overlay = $('#overlay'),
+      $item = $('.menu-item');
 
 
 $hamburger.click(function() {
   $hamburger.toggleClass('active');
   $nav.toggleClass('active');
   $overlay.toggleClass('open');
+  $item.toggleClass('toggle');
   return false;
 });
-
-
 
 
 });
@@ -24,6 +22,34 @@ $hamburger.click(function() {
 $('.menu li').on('click', function(){
     $(this).addClass('active').siblings().removeClass('active');
 });
+
+//
+// $('.menu-item  .toggle').on('click', function(){
+//     $(this).removeClass('toggle');
+//     // $('#overlay').removeClass('open');
+//     // $('#hamburger').removeClass('active');
+    // $('nav').removeClass('active');
+
+$(document).ready(function() {
+  $(this).removeClass();
+  var $nav = $('nav'),
+      $hamburger = $('#hamburger'),
+      $overlay = $('#overlay'),
+      $item = $('.menu-item');
+
+
+$item.click(function() {
+  $hamburger.removeClass('active');
+  $nav.removeClass('active');
+  $overlay.removeClass('open');
+  $item.removeClass('toggle');
+  return false;
+});
+
+
+});
+
+
 
 
 
